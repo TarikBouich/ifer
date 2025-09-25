@@ -1,0 +1,32 @@
+# Nuxt build output
+.nuxt/
+.output/
+.cache/
+
+# Node dependencies
+node_modules/
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# OS-specific
+.DS_Store
+
+# IDE/editor
+.vscode/
+.idea/
+
+# Package managers
+yarn.lock
+pnpm-lock.yaml
+
+# Vendor (if generated, not source)
+vendor/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
