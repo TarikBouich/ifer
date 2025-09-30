@@ -73,7 +73,7 @@ import { register } from 'swiper/element/bundle'
       title: "قصتنا",
       who: "من نحن",
       text: `تحت القيادة والرؤية السامية لصاحب السمو الشيخ تميم بن حمد آل ثاني، 
-      تأسست مؤسسة الحبارى للحفاظ على واحد من أكثر الطيور الصحراوية رمزية. 
+      تأسست المؤسسة الدولية لأبحات الحياة الفطرية للحفاظ على واحد من أكثر الطيور الصحراوية رمزية. 
       هذه المبادرة تجسد التزاماً عميقاً بالتنوع البيولوجي والاستدامة والأجيال القادمة.`,
     },
     bustard: {
@@ -103,8 +103,8 @@ import { register } from 'swiper/element/bundle'
     },
     center: {
       title: "مركزنا",
-      subtitle: "المؤسسة الدولية للأبحاث البيئية (IFER)",
-      text: `في مركزنا، تقود المؤسسة الدولية للأبحاث البيئية (IFER) مشاريع مبتكرة لحماية التنوع البيولوجي والأنظمة البيئية. 
+      subtitle: "المؤسسة الدولية لأبحات الحياة الفطرية (IFER)",
+      text: `في مركزنا، تقود المؤسسة الدولية لأبحات الحياة الفطرية (IFER) مشاريع مبتكرة لحماية التنوع البيولوجي والأنظمة البيئية. 
       ومن بين مهامنا الأساسية الحفاظ على طائر الحبارى. من خلال برامج التربية، حماية المواطن، والمشاركة المجتمعية، 
       نعمل على استعادة أعداد الطيور في البرية وضمان استمرار هذا الطائر الرمزي عبر الأجيال القادمة.`
     },
@@ -573,7 +573,7 @@ import LogoIcon from './components/icons/LogoIcon.vue'
   <section class="pb-0 md:pt-0 sm:pt-0" id="home"> 
     <div class="p-0">
       <!-- :style="{ backgroundImage: `url(${bgHoubara})` }" -->
-      <div class="flex items-center justify-center gap-24 bg-banner md:flex-col lgx:gap-10" >
+      <div class="flex items-center justify-center gap-24 md:flex-col lgx:gap-10 h-screen">
         <video src="@/assets/clip1.mp4" type="video/mp4" class="video-background w-full h-full object-cover" loop="" muted=""></video>
         <div class="absolute z-10  top-1/2 left-4 transform  -translate-y-1/2 font-bold md:hidden lgx:hidden">
               <h1 class="pl-5 text-5xl text-white leading-normal md:text-3xl md:leading-normal md:text-center sm:text-2xl">
@@ -600,12 +600,12 @@ import LogoIcon from './components/icons/LogoIcon.vue'
     </a>
 
   </section>
-  <section class="mx-auto bg-land-50" id="story">
-    <div class="container">
+  <section class="mx-auto bg-banner relative py-[50px]" id="story">
+    <div class="container z-10">
       <!-- Title -->
-      <h2 class="text-4xl pt-8 font-bold text-center text-brown-100 mb-8">{{ translations[currentLang].story.title }}</h2>
-      <div class="relative grid grid-cols-2 sm:grid-cols-1 gap-4 pb-8">
-          <div class="relative flex items-center justify-center w-[600px] h-[600px] sm:w-[100%] sm:h-[auto] mx-auto">
+      <h2 class="text-4xl pt-8 font-bold text-center text-white mb-8 wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">{{ translations[currentLang].story.title }}</h2>
+      <div class="relative grid grid-cols-2 sm:grid-cols-1 gap-4 pb-8 z-20">
+          <div class="relative flex items-center justify-center w-[600px] h-[600px] sm:w-[300px] sm:h-[300px] mx-auto blur-image wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             <img
               src="@/assets/tamim.jpg"
               alt="Vision & Mission"
@@ -613,9 +613,9 @@ import LogoIcon from './components/icons/LogoIcon.vue'
             />
           </div>
           <div class="relative flex items-center justify-center mr-auto">
-            <div class="p-6 flex flex-col justify-center flex-1">
-              <h3 class="text-4xl font-bold mb-3 text-brown-100 capitalize">{{ translations[currentLang].story.who }}</h3>
-              <p class="text-lg leading-relaxed mb-4 text-brown-100">
+            <div class="flex flex-col justify-center flex-1 py-16 px-6 bg-black/50 text-white text-left w-1/2 sm:w-full sm:bg-transparent">
+              <h3 class="text-4xl font-bold mb-3 text-white capitalize wow fadeInUp sm:text-2xl" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].story.who }}</h3>
+              <p class="text-lg leading-relaxed mb-4 text-white wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
                 {{ translations[currentLang].story.text }}
               </p>
             </div>
@@ -630,89 +630,100 @@ import LogoIcon from './components/icons/LogoIcon.vue'
       <video src="@/assets/clip2.mp4" type="video/mp4" class="video-background w-full h-full object-cover w-full h-full absolute inset-0" loop="" muted=""></video>
       <div class="w-full h-full absolute inset-0 bg-black bg-opacity-40 z-2"></div>
       <div class="container z-10">
-        <div class="py-16 px-6 bg-black/50 text-white text-center w-1/2 sm:w-full sm:bg-transparent">
-          <h2 class="text-3xl font-bold mb-4">{{ translations[currentLang].bustard.title }}</h2>
-          <p class="mb-6">
+        <div class="py-16 px-6 bg-black/50 text-white text-center w-1/2 sm:w-full sm:bg-transparent sm:absolute bottom-0">
+          <h2 class="text-3xl font-bold mb-4 wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].bustard.title }}</h2>
+          <p class="mb-6 wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             {{ translations[currentLang].bustard.text }}
           </p>
         </div>
       </div>
     </div>
   </section>
-  <section class="mx-auto bg-land-50" id="work">
+  <section class="mx-auto pb-8 bg-work" id="work">
     <div class="container">
       <!-- Title -->
-      <h2 class="text-3xl pt-8 font-bold text-center text-brown-100 mb-12">
+      <h2 class="text-3xl pt-8 font-bold text-center text-brown-100 mb-12 wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">
         {{ translations[currentLang].work.title }}
       </h2>
 
       <!-- Block 1 -->
-      <div class="grid grid-cols-2 items-center">
-        <img
-          src="@/assets/houbara_fly.png"
-          alt="Conserving Bustards"
-          class="h-[400px] w-full object-cover shadow-lg ml-auto mr-0"
-        />
+      <div class="grid grid-cols-2 items-center sm:grid-cols-1">
+        <div class="circle-image wow fadeInUp sm:h-[300px] sm:w-[300px]" ata-wow-duration="0.5s" data-wow-delay="0.5s">
+           <img
+            src="@/assets/houbara_fly.png"
+            alt="Conserving Bustards"
+            class="h-[400px] w-full object-cover shadow-lg ml-auto mr-0"
+          />
+        </div>
         <div class="p-6">
-          <h3 class="text-2xl font-bold text-brown-100 mb-4">{{ translations[currentLang].work.block1.title }}</h3>
-          <p class="text-gray-700">
+          <h3 class="text-4xl font-bold text-brown-100 mb-4 wow fadeInUp sm:text-2xl" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].work.block1.title }}</h3>
+          <p class="text-gray-700 text-xl wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             {{ translations[currentLang].work.block1.text }}
           </p>
         </div>
       </div>
 
       <!-- Block 2 (reversed) -->
-      <div class="grid grid-cols-2 items-center">
-        <div class="p-6">
-          <h3 class="text-2xl font-bold text-brown-100 mb-4">{{ translations[currentLang].work.block2.title }}</h3>
-          <p class="text-gray-700">
+      <div class="grid grid-cols-2 items-center sm:grid-cols-1">
+        <div class="p-6 sm:order-2">
+          <h3 class="text-4xl font-bold text-brown-100 mb-4 wow fadeInUp sm:text-2xl" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].work.block2.title }}</h3>
+          <p class="text-gray-700 text-xl wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             {{ translations[currentLang].work.block2.text }}
           </p>
         </div>
-        <img
-          src="@/assets/release.jpg"
-          alt="Breeding And Release"
-          class="w-full h-[400px] md:h-full object-cover shadow-lg"
-        />
+        <div class="circle-image wow fadeInUp sm:h-[300px] sm:w-[300px] sm:order-1" ata-wow-duration="0.5s" data-wow-delay="0.5s">
+          <img
+            src="@/assets/release.jpg"
+            alt="Breeding And Release"
+            class="w-full h-[400px] md:h-full object-cover shadow-lg"
+          />
+        </div>
+       
       </div>
 
       <!-- Block 3 -->
-      <div class="grid grid-cols-2 items-center">
-        <img
-          src="@/assets/nestProtection.webp"
-          alt="Nest Protection"
-          class="w-full h-[400px] md:h-full object-cover shadow-lg"
-        />
+      <div class="grid grid-cols-2 items-center sm:grid-cols-1">
+        <div class="circle-image wow fadeInUp sm:h-[300px] sm:w-[300px]" ata-wow-duration="0.5s" data-wow-delay="0.5s">
+          <img
+            src="@/assets/nestProtection.webp"
+            alt="Nest Protection"
+            class="w-full h-[400px] md:h-full object-cover shadow-lg"
+          />
+        </div>
+       
         <div class="p-6">
-          <h3 class="text-2xl font-bold text-brown-100 mb-4">{{ translations[currentLang].work.block3.title }}</h3>
-          <p class="text-gray-700">
+          <h3 class="text-4xl font-bold text-brown-100 mb-4 wow fadeInUp sm:text-2xl" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].work.block3.title }}</h3>
+          <p class="text-gray-700 text-xl wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             {{ translations[currentLang].work.block3.text }}
           </p>
         </div>
       </div>
 
       <!-- Block 4 (reversed) -->
-      <div class="grid grid-cols-2 items-center">
-        <div class="p-6">
-          <h3 class="text-2xl font-bold text-brown-100 mb-4">{{ translations[currentLang].work.block4.title }}</h3>
-          <p class="text-gray-700">
+      <div class="grid grid-cols-2 items-center sm:grid-cols-1">
+        <div class="p-6 sm:order-2">
+          <h3 class="text-4xl font-bold text-brown-100 mb-4 wow fadeInUp sm:text-2xl" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].work.block4.title }}</h3>
+          <p class="text-gray-700 text-xl wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             {{ translations[currentLang].work.block4.text }}
           </p>
         </div>
-        <img
-          src="@/assets/incubation.png"
-          alt="Incubation"
-          class="w-full h-[400px]  object-cover mr-auto ml-0 shadow-lg"
-        />
+        <div class="circle-image wow fadeInUp sm:h-[300px] sm:w-[300px] sm:order-1" ata-wow-duration="0.5s" data-wow-delay="0.5s">
+          <img
+            src="@/assets/incubation.png"
+            alt="Incubation"
+            class="w-full h-[400px]  object-cover mr-auto ml-0 shadow-lg"
+          />
+        </div>
+       
       </div>
     </div>
   </section>
-  <section class="mx-auto bg-white" id="center">
+  <section class="mx-auto bg-land-50" id="center">
     <div class="container">
       <!-- Title -->
-      <h2 class="text-4xl pt-8 font-bold text-center text-brown-100 mb-8">{{ translations[currentLang].center.title }}</h2>
+      <h2 class="text-4xl pt-8 font-bold text-center text-brown-100 mb-8 wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">{{ translations[currentLang].center.title }}</h2>
       <div class="relative grid grid-cols-2 sm:grid-cols-1 gap-4 pb-8">
-          <div class="relative flex items-center justify-center w-[600px] h-[600px] sm:w-[100%] sm:h-[auto] mx-auto">
+          <div class="relative flex items-center justify-center w-[600px] h-[600px]  sm:h-[300px] sm:w-[300px] mx-auto circle-image wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             <img
               src="@/assets/img_air.png"
               alt="Vision & Mission"
@@ -721,8 +732,8 @@ import LogoIcon from './components/icons/LogoIcon.vue'
           </div>
           <div class="relative flex items-center justify-center mr-auto">
             <div class="p-6 flex flex-col justify-center flex-1">
-              <h3 class="text-3xl font-bold mb-3 text-brown-100 capitalize text-center leading-normal">{{ translations[currentLang].center.subtitle }}</h3>
-              <p class="text-lg leading-relaxed mb-4 text-brown-100">
+              <h3 class="text-3xl font-bold mb-3 text-brown-100 capitalize text-left leading-normal wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">{{ translations[currentLang].center.subtitle }}</h3>
+              <p class="text-lg leading-relaxed mb-4 text-brown-100 wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
                 {{ translations[currentLang].center.text }}
               </p>
             </div>

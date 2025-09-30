@@ -39,7 +39,7 @@ onMounted(() => {
     videos.forEach(video => {
       video.play().catch(err => console.log('Video play error:', err))
     })
-  }, 7000)
+  }, 3000)
 })
 </script>
 
