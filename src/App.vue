@@ -8,7 +8,6 @@ import { register } from 'swiper/element/bundle'
   en: {
     nav: {
       home: "Home",
-      story: "Our Story",
       bustard: "Meet the Bustards",
       work: "Our Work",
       center: "Our Center",
@@ -61,7 +60,6 @@ import { register } from 'swiper/element/bundle'
   ar: {
     nav: {
       home: "الرئيسية",
-      story: "قصتنا",
       bustard: "تعرف على الحباري",
       work: "عملنا",
       center: "مركزنا",
@@ -586,8 +584,8 @@ import LogoIcon from './components/icons/LogoIcon.vue'
       </div>
     </div>
     <a
-    @click.prevent="scrollToSection('#story')"
-    href="#story"
+    @click.prevent="scrollToSection('#bustard')"
+    href="#bustard"
     class="text-xs uppercase tracking-widest "
     >
     <span class="absolute bottom-5 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-10 h-10 cursor-pointer">
@@ -600,12 +598,11 @@ import LogoIcon from './components/icons/LogoIcon.vue'
     </a>
 
   </section>
-  <section class="mx-auto bg-banner relative py-[50px]" id="story">
+  <!-- <section class="mx-auto bg-banner relative py-[50px]" id="story">
     <div class="container z-10">
-      <!-- Title -->
       <h2 class="text-4xl pt-8 font-bold text-center text-white mb-8 wow fadeInUp" data-wow-duration="2s" data-wow-delay="2s">{{ translations[currentLang].story.title }}</h2>
       <div class="relative grid grid-cols-2 sm:grid-cols-1 gap-4 pb-8 z-20">
-          <div class="relative flex items-center justify-center w-[600px] h-[600px] sm:w-[300px] sm:h-[300px] mx-auto blur-image wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
+         <div class="relative flex items-center justify-center w-[600px] h-[600px] sm:w-[300px] sm:h-[300px] mx-auto blur-image wow fadeInUp" ata-wow-duration="0.5s" data-wow-delay="0.5s">
             <img
               src="@/assets/tamim.jpg"
               alt="Vision & Mission"
@@ -623,7 +620,7 @@ import LogoIcon from './components/icons/LogoIcon.vue'
       </div>
       
     </div>
-  </section>
+  </section> -->
   <section class="mx-auto" id="bustard">
     <!-- bg-[url('@/assets/h1.png')] -->
     <div class=" bg-cover bg-center h-screen flex items-center relative  py-4">
